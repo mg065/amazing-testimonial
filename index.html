@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Amazing Testimonial</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="testimonial-section">
+        <div class="inner-width">
+            <h1>what our clients say</h1>
+            <div class="testimonial-pics">
+                <img src="photosoftestimonial/pg1.jpg" alt="test-1" class="active">
+                <img src="photosoftestimonial/pg2.jpg" alt="test-2">
+                <img src="photosoftestimonial/pg3.jpg" alt="test-3">
+                <img src="photosoftestimonial/pg4.jpg" alt="test-4">
+            </div>
+            
+            <div class="testimonial-contents">
+                <div class="testimonial active" id="test-1">
+                    <p>A Web Developer is responsible for the coding, design and layout of a website according to a company's specifications. As the role takes into consideration user experience and function, a certain level of both graphic design and computer programming is necessary.</p>
+                    <span class="description"> Allie / Developer </span>
+                </div>
+
+                <div class="testimonial" id="test-2">
+                   <p>A Teacher is responsible for preparing lesson plans and educating students at all levels. Their duties include assigning homework, grading tests, and documenting progress.</p>
+                    <span class="description"> Carla / Teacher </span>
+                </div>
+
+                <div class="testimonial" id="test-3">
+                            <p>Writer: job description. Writers produce literary compositions, articles, reports, books and other texts. Excellent writing and communication skills are obviously essential but so is a determined attitude and the ability to take criticism. The vast majority of writers are self-employed or freelance.</p>
+                            <span class="description"> Tom / Writer </span>
+                </div>
+
+                <div class="testimonial" id="test-4">
+                                <p>Photographers are artists with the camera, using a blend of technical skills and an artistic eye to take pictures of people, places, landscapes, food, you name it. Photographers can work as fine artists, wedding and event photographers, or sell their photos to commercial clients</p>
+                                <span class="description"> Shizzele / Photographers </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.testimonial-pics img').click(function(){
+          $(".testimonial-pics img").removeClass("active");
+          $(this).addClass("active");
+  
+          $(".testimonial").removeClass("active");
+          $("#"+$(this).attr("alt")).addClass("active");
+        });
+      </script>
+    </body>
+</html>
